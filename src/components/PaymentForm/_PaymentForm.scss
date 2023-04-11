@@ -1,0 +1,239 @@
+@import "../../styles/variables";
+
+.payment_form {
+  width: 750px;
+  &-body {
+    background: $white;
+    padding: 50px 50px 100px;
+    .user {
+      padding: 37px 41px 37px 39px;
+      background: $light-bg;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        &-avatar {
+          background: $light-bg1;
+          border-radius: 50%;
+          width: 90px;
+          height: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $dark1;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 54px;
+          text-transform: uppercase;
+        }
+        &-detail {
+          .name {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 54px;
+            letter-spacing: -0.3px;
+            font-feature-settings: "pnum" on, "lnum" on;
+            margin-bottom: 4px;
+          }
+          .phone {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 35px;
+            letter-spacing: -0.3px;
+            color: $gray;
+          }
+        }
+      }
+      &-action {
+        button {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 35px;
+          text-align: center;
+          letter-spacing: -0.3px;
+          color: $dark1;
+          text-transform: capitalize;
+          padding: 28px 24px 27px 23px !important;
+          background: $light-bg1;
+          border-radius: 10px;
+        }
+      }
+    }
+    .select_service {
+      margin-top: 50px;
+      &-title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 54px;
+        letter-spacing: -0.3px;
+        font-feature-settings: "pnum" on, "lnum" on;
+        color: $dark1;
+      }
+      &-info {
+        margin-top: 40px;
+        border: 1px solid $border-color;
+        border-radius: 20px;
+        padding: 33px 25px 34px 34px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        .image {
+          border-top-right-radius: 12px;
+          border-bottom-left-radius: 12px;
+          width: 120px;
+          height: 120px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .detail {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          &-title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 41px;
+            letter-spacing: -0.3px;
+            font-feature-settings: "pnum" on, "lnum" on;
+
+            color: $dark1;
+          }
+          &-time,
+          &-location {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            letter-spacing: -0.3px;
+            color: $gray;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          }
+          &-price {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 41px;
+            letter-spacing: -0.3px;
+            color: $dark1;
+          }
+        }
+      }
+    }
+    .location,
+    .note {
+      margin-top: 40px;
+      &-title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        letter-spacing: -0.3px;
+        color: $dark1;
+        margin-bottom: 20px;
+      }
+      &-input {
+        input {
+          padding: 30px 26px 29px 26px !important;
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 41px;
+          letter-spacing: -0.3px;
+          border: 1px solid $border-color;
+          border-radius: 12px;
+        }
+        fieldset {
+          border: none;
+        }
+      }
+    }
+    .pay {
+      margin-top: 50px;
+      &-title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 68px;
+        /* identical to box height */
+
+        letter-spacing: -0.3px;
+        font-feature-settings: "pnum" on, "lnum" on;
+
+        color: $dark1;
+      }
+      &-options {
+        margin-top: 50px;
+      }
+    }
+    .confirm {
+      margin-top: 50px;
+      .container {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        font-size: 30px;
+        user-select: none;
+        padding-left: 55px;
+        margin-bottom: 10px;
+      }
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: $white;
+        border-radius: 3px;
+        border: 3px solid #616161;
+      }
+      .container:hover .checkmark {
+        background: #ccc;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .container .checkmark:after {
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      .container input:checked ~ .checkmark {
+        background: $blue;
+      }
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      &-wrapper {
+        &-label {
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 35px;
+          letter-spacing: -0.3px;
+          color: $gray;
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,17 +1,13 @@
 import React from "react";
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-import './footer.scss'
+import './_Footer.scss'
 
 const Footer = () => {
     return (
         <div className="footer">
-            <Stack spacing={2} direction="row">
-                <Button variant="text">Text</Button>
-                <Button variant="contained">Contained</Button>
-                <Button variant="outlined">Outlined</Button>
-            </Stack>
+            <Button className="footer-previous" variant="text">Previous</Button>
+            <Button className="footer-next" variant="contained">Next</Button>
         </div>
     )
 }

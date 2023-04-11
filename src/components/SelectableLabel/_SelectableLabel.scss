@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.selectable-labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  &-item {
+    width: calc(50% - 10px);
+    .checked {
+      padding: 0 60px;
+      height: 100px;
+      background: $light-bg1;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 41px;
+      text-align: center;
+      letter-spacing: -0.3px;
+      color: $dark1;
+      border: 1px solid $light-bg1;
+      word-wrap: break-word;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+    }
+    input {
+      display: none;
+      &:checked ~ .checked {
+        border-color: $dark1;
+        background-color: $white;
+      }
+    }
+  }
+}

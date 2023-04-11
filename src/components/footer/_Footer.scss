@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  background: $white;
+  border-top: 1px solid $border-color;
+  button {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: -0.3px;
+  }
+  &-previous {
+    color: $dark1 !important;
+    padding: 0 !important;
+    font-weight: 500;
+  }
+  &-next {
+    padding: 30px 85px !important;
+    background: $blue !important;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+}

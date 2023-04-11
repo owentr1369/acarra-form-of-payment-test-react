@@ -1,15 +1,11 @@
 import React from 'react';
-import './App.css';
-
-import Footer from './components/footer/footer';
-import Header from './components/header/header';
+import './App.scss';
+import PaymentForm from './components/PaymentForm/PaymentForm';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <h1>This is content</h1>
-      <Footer />
+      <PaymentForm />
     </div>
   );
 }
