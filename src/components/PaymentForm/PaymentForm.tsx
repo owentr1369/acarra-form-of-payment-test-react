@@ -16,22 +16,37 @@ const PaymentForm = () => {
     }
     const [payOption, setPayOption] = useState('cash')
 
+    let headerContent = 'Choose the form of payment'
+    let nextContent = 'Next'
+
     const payOptions = [
         { label: 'Cash', slug: 'cash' },
         { label: 'Credit card', slug: 'credit_card' },
         { label: 'eWallet/ Virtual bank', slug: 'ewallet' },
     ]
+    const service = {
+        title: 'Japanese lessons',
+        time: 'Nov 7, 2020 · 11:30',
+        location: 'Client`s place',
+        price: '350.000'
+    }
+
+    const user = {
+        name: 'John',
+        phone: '(88) 99602-2404'
+    }
+
     return (
         <>
             <div className="payment_form">
-                <Header />
+                <Header headerContent={headerContent} />
                 <div className="payment_form-body">
                     <div className="user">
                         <div className="user_info">
                             <div className="user_info-avatar">J</div>
                             <div className="user_info-detail">
-                                <div className="name">John</div>
-                                <div className="phone">(88) 99602-2404</div>
+                                <div className="name">{user.name}</div>
+                                <div className="phone">{user.phone}</div>
                             </div>
 
                         </div>
@@ -49,18 +64,22 @@ const PaymentForm = () => {
                             </div>
                             <div className="detail">
                                 <div className="detail-title">
-                                    Japanese lessons
+                                    {service.title}
                                 </div>
                                 <div className="detail-time">
                                     <img src={CalendarRegular} alt="" />
-                                    <div className="detail-time-text">Nov 7, 2020 · 11:30</div>
+                                    <div className="detail-time-text">
+                                        {service.time}
+                                    </div>
                                 </div>
                                 <div className="detail-location">
                                     <img src={LocationDotRegular} alt="" />
-                                    <div className="detail-location-text">Client`s place</div>
+                                    <div className="detail-location-text">
+                                        {service.location}
+                                    </div>
                                 </div>
                                 <div className="detail-price">
-                                    Rp 350.000
+                                    Rp {service.price}
                                 </div>
                             </div>
                         </div>
@@ -101,7 +120,7 @@ const PaymentForm = () => {
                         </label>
                     </div>
                 </div>
-                <Footer />
+                <Footer nextContent={nextContent} />
             </div>
         </>
     )

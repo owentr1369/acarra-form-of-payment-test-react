@@ -4,7 +4,11 @@ import Button from '@mui/material/Button';
 
 import close from '../../assets/svg/close.svg'
 
-const Header = () => {
+interface IChildComponentProps {
+    headerContent: string
+}
+
+const Header: React.FC<IChildComponentProps> = (props) => {
     const closeTab = () => {
         console.log("Close");
     }
@@ -13,7 +17,7 @@ const Header = () => {
         <>
             <div className="header">
                 <div className="header-title">
-                    Choose the form of payment
+                    {props.headerContent}
                 </div>
                 <div className="header-close">
                     <Button onClick={closeTab} variant="text">
