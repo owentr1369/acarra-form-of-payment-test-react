@@ -5,14 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 50px;
+  padding: 15px 25px;
   background: $white;
   border-top: 1px solid $border-color;
   button {
     text-transform: capitalize;
-    font-size: 30px;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 15px;
+    line-height: 21px;
     letter-spacing: -0.3px;
   }
   &-previous {
@@ -21,9 +20,9 @@
     font-weight: 500;
   }
   &-next {
-    padding: 30px 85px !important;
+    padding: 15px 43px !important;
     background: $blue !important;
-    border-radius: 12px;
+    border-radius: 6px;
     font-weight: 600;
   }
 }

@@ -1,15 +1,17 @@
 @import "../../styles/variables";
 
 .payment_form {
-  width: 750px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
   &-body {
     background: $white;
-    padding: 50px 50px 100px;
+    padding: 26px 26px 52px;
     .user {
-      padding: 37px 41px 37px 39px;
+      padding: 20px;
       background: $light-bg;
       border: 1px solid $border-color;
-      border-radius: 20px;
+      border-radius: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -18,34 +20,34 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 26px;
+        gap: 13px;
         &-avatar {
           background: $light-bg1;
           border-radius: 50%;
-          width: 90px;
-          height: 90px;
+          width: 45px;
+          height: 45px;
           display: flex;
           justify-content: center;
           align-items: center;
           color: $dark1;
           font-weight: 700;
-          font-size: 40px;
-          line-height: 54px;
+          font-size: 20px;
+          line-height: 27px;
           text-transform: uppercase;
         }
         &-detail {
           .name {
             font-weight: 600;
-            font-size: 40px;
-            line-height: 54px;
+            font-size: 20px;
+            line-height: 27px;
             letter-spacing: -0.3px;
             font-feature-settings: "pnum" on, "lnum" on;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
           }
           .phone {
             font-weight: 500;
-            font-size: 26px;
-            line-height: 35px;
+            font-size: 13px;
+            line-height: 18px;
             letter-spacing: -0.3px;
             color: $gray;
           }
@@ -54,41 +56,41 @@
       &-action {
         button {
           font-weight: 600;
-          font-size: 26px;
-          line-height: 35px;
+          font-size: 13px;
+          line-height: 18px;
           text-align: center;
           letter-spacing: -0.3px;
           color: $dark1;
           text-transform: capitalize;
-          padding: 28px 24px 27px 23px !important;
+          padding: 14px 12px !important;
           background: $light-bg1;
-          border-radius: 10px;
+          border-radius: 5px;
         }
       }
     }
     .select_service {
-      margin-top: 50px;
+      margin-top: 25px;
       &-title {
         font-weight: 700;
-        font-size: 40px;
-        line-height: 54px;
+        font-size: 20x;
+        line-height: 27px;
         letter-spacing: -0.3px;
         font-feature-settings: "pnum" on, "lnum" on;
         color: $dark1;
       }
       &-info {
-        margin-top: 40px;
+        margin-top: 20px;
         border: 1px solid $border-color;
-        border-radius: 20px;
-        padding: 33px 25px 34px 34px;
+        border-radius: 10px;
+        padding: 17px 12px 17px 17px;
         display: flex;
-        gap: 24px;
+        gap: 12px;
         align-items: center;
         .image {
-          border-top-right-radius: 12px;
-          border-bottom-left-radius: 12px;
-          width: 120px;
-          height: 120px;
+          border-top-right-radius: 6px;
+          border-bottom-left-radius: 6px;
+          width: 60px;
+          height: 60px;
           overflow: hidden;
           img {
             width: 100%;
@@ -97,11 +99,11 @@
         .detail {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 6px;
           &-title {
             font-weight: 600;
-            font-size: 30px;
-            line-height: 41px;
+            font-size: 15px;
+            line-height: 21px;
             letter-spacing: -0.3px;
             font-feature-settings: "pnum" on, "lnum" on;
 
@@ -110,18 +112,18 @@
           &-time,
           &-location {
             font-weight: 500;
-            font-size: 20px;
-            line-height: 27px;
+            font-size: 10px;
+            line-height: 14px;
             letter-spacing: -0.3px;
             color: $gray;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 7px;
           }
           &-price {
             font-weight: 600;
-            font-size: 30px;
-            line-height: 41px;
+            font-size: 15px;
+            line-height: 21px;
             letter-spacing: -0.3px;
             color: $dark1;
           }
@@ -130,24 +132,24 @@
     }
     .location,
     .note {
-      margin-top: 40px;
+      margin-top: 20px;
       &-title {
         font-weight: 600;
-        font-size: 30px;
-        line-height: 41px;
+        font-size: 15px;
+        line-height: 21px;
         letter-spacing: -0.3px;
         color: $dark1;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       &-input {
         input {
-          padding: 30px 26px 29px 26px !important;
+          padding: 15px 13px 15px !important;
           font-weight: 400;
-          font-size: 30px;
-          line-height: 41px;
+          font-size: 15px;
+          line-height: 21px;
           letter-spacing: -0.3px;
           border: 1px solid $border-color;
-          border-radius: 12px;
+          border-radius: 6px;
         }
         fieldset {
           border: none;
@@ -155,32 +157,30 @@
       }
     }
     .pay {
-      margin-top: 50px;
+      margin-top: 25px;
       &-title {
         font-weight: 700;
-        font-size: 50px;
-        line-height: 68px;
-        /* identical to box height */
-
+        font-size: 25px;
+        line-height: 34px;
         letter-spacing: -0.3px;
         font-feature-settings: "pnum" on, "lnum" on;
 
         color: $dark1;
       }
       &-options {
-        margin-top: 50px;
+        margin-top: 25px;
       }
     }
     .confirm {
-      margin-top: 50px;
+      margin-top: 25px;
       .container {
         display: inline-block;
         position: relative;
         cursor: pointer;
-        font-size: 30px;
+        font-size: 15px;
         user-select: none;
-        padding-left: 55px;
-        margin-bottom: 10px;
+        padding-left: 28px;
+        margin-bottom: 5px;
       }
       .container input {
         position: absolute;
@@ -191,10 +191,10 @@
       }
       .checkmark {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 0;
-        width: 30px;
-        height: 30px;
+        width: 15px;
+        height: 15px;
         background: $white;
         border-radius: 3px;
         border: 3px solid #616161;
@@ -210,10 +210,10 @@
       .container .checkmark:after {
         top: 50%;
         left: 50%;
-        width: 5px;
-        height: 10px;
+        width: 3px;
+        height: 6px;
         border: solid white;
-        border-width: 0 3px 3px 0;
+        border-width: 0 2px 2px 0;
         transform: translate(-50%, -50%) rotate(45deg);
       }
       .container input:checked ~ .checkmark {
@@ -225,8 +225,8 @@
       &-wrapper {
         &-label {
           font-weight: 500;
-          font-size: 26px;
-          line-height: 35px;
+          font-size: 13px;
+          line-height: 18px;
           letter-spacing: -0.3px;
           color: $gray;
           a {
